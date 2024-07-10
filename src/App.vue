@@ -6,12 +6,14 @@
   import { store } from './api';
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue';
+  import AppCard from './components/AppCard.vue'
 
   // esporto e definisco Appheader e Appmain
   export default{
     components :{
       AppHeader,
       AppMain,
+      AppCard,
     },
 
     data(){
@@ -44,6 +46,7 @@
 <template>
   <AppHeader/>
   <AppMain/>
+  <AppCard/>
 </template>
 
 <style lang="scss" scoped>

@@ -13,10 +13,10 @@
 <template>
     <div class="card">
         <div class="img-container">
-            <img :src="CardInfo.card_images[0].image_url" alt="">
+            <img v-for="img in info.card_images" :src="img.image_url" alt="">
         </div>
         <h2 class="card-name">{{ CardInfo.name }}</h2>
-        <h2 class="card-element">{{ CardInfo.archetype }}</h2>
+        <h2 class="card-type">{{ CardInfo.archetype }}</h2>
     </div>
 </template>
 
