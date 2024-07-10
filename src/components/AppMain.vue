@@ -85,6 +85,7 @@
 
             .cards{
                 min-height: 100px;
+                min-width: 100px;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;

@@ -1,4 +1,6 @@
 <script>
+import { info } from 'sass';
+
 
     export default{
         name : 'AppCard',
@@ -13,10 +15,11 @@
 <template>
     <div class="card">
         <div class="img-container">
-            <img v-for="img in info.card_images" :src="img.image_url" alt="">
+            <img v-for="img in CardInfo.card_images" :src="img.image_url" alt="">
         </div>
         <h2 class="card-name">{{ CardInfo.name }}</h2>
         <h2 class="card-type">{{ CardInfo.archetype }}</h2>
+        <pre>{{ info }}</pre>
     </div>
 </template>
 
@@ -26,7 +29,7 @@
 @use '../styles/partials/mixins' as *;
 
 
-.card{
+.cards{
     min-height: 100px;
     background-color: $primary_color;
     width: calc(100% / 5 - 20px);
@@ -36,6 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: blue;
 
     .img-container{
         width: 100%;
